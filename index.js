@@ -13,11 +13,15 @@
 
 class Graph{
     constructor() {
-        this.adjacencyList = {}
+        this.adjacencyList = []
     }
     addVertex(name) {
         //create a key with an empty array as the value   
         this.adjacencyList[name] = [];
+    }
+    addEdge(v1, v2){
+      this.adjacencyList.push(v2);
+      this.adjacencyList.push(v1);
     }
 }
 
@@ -26,5 +30,16 @@ const graph = new Graph();
 graph.addVertex("M")
 graph.addVertex("Y")
 console.log(graph)
+
+graph.addEdge("A", "B")
+graph.addEdge("A", "B")
+
+
+console.log(graph)
+
+
+
+
+
 
 
